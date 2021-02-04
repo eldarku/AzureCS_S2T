@@ -1,0 +1,9 @@
+#because of the very mixed input data structure, I had to extract all relelevant archives with Powershell and then manually moving all the folders, with had location different than \<username>\voice\speech
+
+
+
+1..10 | % {Get-ChildItem -File -Recurse -include ('*.rar', '*.zip','*.7z')  |  %{ & 'C:\Program Files\7-Zip\7z.exe' x $_.FullName "-r" "-ax!data.*" "$("-o"+$_.DirectoryName+"\"+$_.BaseName)" ;Remove-Item $_.FullName}}
+
+
+#test structure:
+(Get-ChildItem -File -Recurse -include ('*.wav')).DirectoryName | Where-Object {$_.split("\")[-2].Substring(0,4) -eq 'data'} | %{$_.split("\")[-10]+"\"+$_.split("\")[-9]+"\"+$_.split("\")[-8]+"\"+$_.split("\")[-7]+"\"+$_.split("\")[-6]+"\"+$_.split("\")[-5]+"\"+$_.split("\")[-4]} | Select-Object -Unique
