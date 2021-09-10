@@ -1,0 +1,37 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "0804fd25-b437-4b7a-a3ed-ec6f38bd9008",
+  "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "Deploy Diagnostic Settings for Azure Machine Learning workspace to LA",
+  "policyDefinitionId": "/subscriptions/25d926c7-ff84-4020-bad1-33befa55b372/providers/Microsoft.Authorization/policyDefinitions/f8109403-1831-4470-8921-585b9f02b845",
+  "scope": "/subscriptions/25d926c7-ff84-4020-bad1-33befa55b372",
+  "notScopes": [],
+  "parameters": {
+   "logAnalytics": {
+    "value": "/subscriptions/25d926c7-ff84-4020-bad1-33befa55b372/resourcegroups/cs/providers/microsoft.operationalinsights/workspaces/ws1cg"
+   }
+  },
+  "metadata": {
+   "assignedBy": "Eldar Kuli-zade",
+   "parameterScopes": {
+    "logAnalytics": "/subscriptions/25d926c7-ff84-4020-bad1-33befa55b372"
+   },
+   "createdBy": "7d16575a-5b88-4f33-94ae-ca1d6002de26",
+   "createdOn": "2021-09-09T18:31:53.2215351Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/25d926c7-ff84-4020-bad1-33befa55b372/providers/Microsoft.Authorization/policyAssignments/3d97596d666543718bbecf68",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "3d97596d666543718bbecf68",
+ "location": "eastus"
+}
